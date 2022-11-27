@@ -5,9 +5,93 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  background-color: #1F2022;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+td{
+  width: 50px;
+  height: 10px;
+  border: 5px solid black;
+}
+
+svg {
+  top: 30px;
+  left: 10px;
+  z-index: -100;
+  position: absolute;
+}
+
+svg path{
+  fill: #7c03c4;
+}
+
+.container{
+  position: absolute;
+  left: 40%;
+  width: 300px;
+  height: 90vh;
+  border: 10px solid black;
+  border-radius: 20px;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(93,9,121,1) 40%, rgba(0,212,255,1) 100%);  overflow: hidden;
+}
+
+.svg-container {
+  width: 230px;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 200px;
+  object-fit: cover;
+  animation: horizontalMove 10s infinite;
+}
+
+.image-container{
+  width: 230px;
+  height: 230px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 200px;
+  left: -620px;
+  object-fit: cover;
+  animation: mymove 10s infinite;
+  z-index: 100;
+}
+
+
+img{
+  width: 100%;
+  height: 100%;
+ }
+
+ 
+.delay1{
+  animation-delay: 1s;
+}
+
+.delay2{
+  animation-delay: 2s;
+}
+
+@keyframes horizontalMove {
+  from {left: -200px; }
+  to {left: 2000px; }
+}
+
+@keyframes mymove {
+  from {left: -670px; }
+  to {left: 1200px; }
 }
